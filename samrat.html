@@ -1,0 +1,48 @@
+<!-- docs/newpage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Page</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: url('samratt.jpg') center/cover no-repeat; /* Background image */
+      color: #fff; /* Text color */
+      background-size: cover; /* Ensure the background image covers the entire body */
+    }
+
+    #content {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    }
+
+    #backButton {
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      display: inline-block;
+      background-color: #2ecc71; /* Button color */
+      color: #fff; /* Button text color */
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    function goBack() {
+      window.location.href = 'name.html'; // Redirect to the index.html page
+    }
+  </script>
+
+</body>
+</html>

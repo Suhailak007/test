@@ -1,0 +1,91 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Link</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #upper-section {
+      flex: 1;
+      background-color: #8e44ad; /* Purple background color */
+      color: #ecf0f1; /* Text color */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #lower-section {
+      flex: 4;
+      background: url('samr.jpg') center/cover; /* Background image */
+      color: #fff; /* Text color */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #question {
+      font-size: 24px;
+    }
+
+    #yes, #no {
+      cursor: pointer;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      display: inline-block;
+      background-color: #2ecc71; /* Yes button color */
+      color: #fff; /* Yes button text color */
+    }
+
+    #no {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <div id="upper-section">
+      <div id="question">A Social Experiment was done a few days ago by Dr. Alwasbir Laskar, and it was found that a school teacher named "Samrat" is gay. What do you think? Is he gay?</div>
+    </div>
+    <div id="lower-section">
+      <button id="yes" onclick="redirectToNewPage()">Yes</button>
+      <button id="no" onmouseover="driftAway()" onclick="alert('You chose No!')">No</button>
+    </div>
+  </div>
+
+  <script>
+    function driftAway() {
+      var noButton = document.getElementById('no');
+      var newX = Math.random() * (window.innerWidth - 150); // Adjust the range as needed
+      var newY = Math.random() * (window.innerHeight - 50); // Adjust the range as needed
+      noButton.style.left = newX + 'px';
+      noButton.style.top = newY + 'px';
+    }
+
+    function redirectToNewPage() {
+      window.location.href = 'samrat.html'; // Redirect to newpage.html
+    }
+  </script>
+
+</body>
+</html>
